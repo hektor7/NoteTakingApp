@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+      prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.51" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox prefHeight="48.0" prefWidth="393.0">
+            <children>
+                <HBox prefHeight="42.0" prefWidth="197.0">
+                    <children>
+                        <ImageView fitHeight="66.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../resources/pencil.png"/>
+                            </image>
+                            <HBox.margin>
+                                <Insets left="5.0" top="5.0"/>
+                            </HBox.margin>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="348.0" text="Note Taking"
+                       textAlignment="CENTER">
+                    <font>
+                        <Font size="36.0"/>
+                    </font>
+                </Label>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="btnNewNote" mnemonicParsing="false" onAction="#doNewNote" prefHeight="67.0"
+                                prefWidth="83.0" text="New Note">
+                            <HBox.margin>
+                                <Insets right="5.0" top="5.0"/>
+                            </HBox.margin>
+                            <font>
+                                <Font size="12.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <BorderPane prefHeight="36.0" prefWidth="393.0">
+            <left>
+                <TextField prefHeight="26.0" prefWidth="272.0" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets left="5.0"/>
+                    </BorderPane.margin>
+                </TextField>
+            </left>
+            <center>
+                <Separator orientation="VERTICAL" prefHeight="36.0" prefWidth="0.0" BorderPane.alignment="CENTER"/>
+            </center>
+            <right>
+                <Label text="Label" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets right="5.0"/>
+                    </BorderPane.margin>
+                </Label>
+            </right>
+        </BorderPane>
+        <TableView prefHeight="470.0" prefWidth="393.0">
+            <columns>
+                <TableColumn prefWidth="111.0" text="Title"/>
+                <TableColumn prefWidth="281.0" text="Description"/>
+            </columns>
+        </TableView>
+        <Separator prefWidth="200.0"/>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+            <children>
+                <Button fx:id="btnDeleteNote" mnemonicParsing="false" onAction="#doDeleteNote" prefHeight="35.0"
+                        prefWidth="100.0" text="Delete"/>
+                <Button fx:id="btnEditNote" mnemonicParsing="false" onAction="#doEditNote" prefHeight="35.0"
+                        prefWidth="100.0" text="Edit"/>
+            </children>
+        </HBox>
+    </children>
+</VBox>
