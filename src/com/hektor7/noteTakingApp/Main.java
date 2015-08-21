@@ -1,5 +1,6 @@
 package com.hektor7.noteTakingApp;
 
+import com.hektor7.noteTakingApp.ui.FXMLPage;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,9 +11,13 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("ListNotesUI.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Parent root = FXMLLoader.load(FXMLPage.LIST.getPageUrl());
+
+        Scene scene = new Scene(root);
+
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Note Taking :)");
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
