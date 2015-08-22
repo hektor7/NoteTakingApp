@@ -1,10 +1,21 @@
 <component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="NoteTakingApp">
-    <output-path>$PROJECT_DIR$/out/</output-path>
-    <root id="archive" name="NoteTakingApp.jar">
-      <element id="module-output" name="NoteTakingApp" />
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/out/META-INF/MANIFEST.MF" />
+  <artifact type="javafx" build-on-make="true" name="NoteTakingApp">
+    <output-path>$PROJECT_DIR$/out/artifacts/NoteTakingApp</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="com.hektor7.noteTakingApp.Main" />
+        <option name="description" value="" />
+        <option name="height" value="600" />
+        <option name="htmlParamFile" value="" />
+        <option name="paramFile" value="" />
+        <option name="title" value="NoteTakingApp" />
+        <option name="vendor" value="" />
+        <option name="width" value="400" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="NoteTakingApp.jar">
+        <element id="module-output" name="NoteTakingApp" />
       </element>
     </root>
   </artifact>
